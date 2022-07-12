@@ -12,8 +12,9 @@ class MultithreadingConsoleApp
     private static void Method(object o)
     {
         var id = (string)o;
-        Thread.Sleep(new Random().Next(1000, 5000));
-        Console.WriteLine($"Работает поток: {id}");
+        var sleep = new Random().Next(1000, 5000);
+        Thread.Sleep(sleep);
+        Console.WriteLine($"Работает поток: {id}. Задержка {sleep} милисекунд");
     }
 
     private static void Main()
